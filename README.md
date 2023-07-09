@@ -11,21 +11,21 @@
 
 * [1.0. Business Problem](#1-business-problem)
     * [1.1 Solution](#11-solution)
-* [2.0. Business Assumptions](#20-business-assumptions)
+* [2.0. Business Assumptions](#2-business-assumptions)
     * [2.1. Data Dictionary](#21-data-dictionary)
 
-* [3.0. Solution Strategy](#30-solution-strategy)
+* [3.0. Solution Strategy](#3-solution-strategy)
 
-* [4.0. Top 3 Data Insights](#40-top-3-data-insights)
-* [5.0. Machine Learning Model Applied](#50-machine-learning-model-applied)
+* [4.0. Top 3 Data Insights](#4-top-3-data-insights)
+* [5.0. Machine Learning Model Applied](#5-machine-learning-model-applied)
     * [5.1. Evaluation Metrics](#51-evaluation-metrics)
     * [5.2. Defining the number of clusters](#52-defining-the-number-of-clusters-and-the-embedding-space)
 * [6.0. Machine Learning Model Performance](#6-machine-learning-model)
     * [6.1. Silhouette analysis plot](#61-silhouette-analysis-plot---final-model-k-means)
     * [6.2. Clusters in the Tree-based and UMAP space](#62-clusters-in-the-tree-based-and-umap-space)
-* [7.0. Business Results](#70-business-results)
+* [7.0. Business Results](#7-business-results)
     * [7.1. Answering Business Questions](#71-answering-business-questions)
-* [8.0. Conclusions](#80-conclusions)
+* [8.0. Conclusions](#8-conclusions)
 * [9.0. Lessons Learned](#9-lessons-learned)
 * [10.0. Refernces](#10-references)
 </br><br/>
