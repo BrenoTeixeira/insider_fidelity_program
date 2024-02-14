@@ -4,7 +4,7 @@
 <img src='images/readme/cover.jpg'>
 
 
-## The goal of this project is to discover customers similarities to create an insiders program.
+## The goal of this project is to discover customers' similarities to create an insiders program.
 <p></p>
 
 # Summary
@@ -35,11 +35,11 @@
 
 OnlineMart is an e-commerce that sells second-line products of multiple brands.
 
-In over a year of operation, the marketing team realized that some customers in their base buy expensive products at high frequency and are responsible for a significant share of the company's revenue. To leverage this customer segment, the marketing has decided to inroduce a loyalty program for these top customers, known as Insiders.
+In over a year of operation, the marketing team realized that some customers in their base buy expensive products at high frequency and are responsible for a significant share of the company's revenue. To leverage this customer segment, the marketing has decided to introduce a loyalty program for these top customers, known as Insiders.
 
 However, the marketing team doesn't have advanced data analysis knowledge to define the eligible customers for the program. So they reached out to the data team for assistance. 
 
-The data team taske is to use advanced data mining techniques to identify and select the customers eligible for the Insiders program.
+The data team task is to use advanced data mining techniques to identify and select the customers eligible for the Insiders program.
 
 ## 1.1 Solution
 
@@ -59,18 +59,18 @@ The final product will be a report with answers to the following business questi
 
 |Attribute|Description
 ----------|-----------
-InvoiceNo| Invoice number. Nominal, a 6-digit integral number uniquely assigned to each transaction. If this code starts with letter 'c', it indicates a cancellation.
-StockCode| Product (item) code. Nominal, a 5-digit integral number uniquely assigned to each distinct product.
+InvoiceNo| Invoice number. Nominal. A 6-digit integral number uniquely assigned to each transaction. If this code starts with the letter 'c', it indicates a cancellation.
+StockCode| Product (item) code. Nominal. A 5-digit integral number uniquely assigned to each distinct product.
 Description| Product (item) name. Nominal.
 Quantity| The quantities of each product (item) per transaction. Numeric.
-InvoiceDate| Invoice Date and time. Numeric, the day and time when each transaction was generated.
+InvoiceDate| Invoice Date and time. Numeric. The day and time when each transaction was generated.
 UnitPrice| Unit price. Numeric, Product price per unit in sterling.
-CustomerID| Customer number. Nominal, a 5-digit integral number uniquely assigned to each customer.
-Country| Country name. Nominal, the name of the country where each customer resides.
+CustomerID| Customer number. Nominal. A 5-digit integral number uniquely assigned to each customer.
+Country| Country name. Nominal. The name of the country where each customer resides.
 
-Instances with negative quantity and price values that are not cancellation won't be considered for the project.
+Instances with negative quantity and price values that are not canceled purchases won't be considered for the project.
 
-Instances with a stock code with letters are most likely not a customer transaction.
+Instances with a stock code with letters are most likely not customer transactions.
 </br><br/>
 
 # 3. Solution Strategy
@@ -81,23 +81,23 @@ CRISP-DM method was used to develop this project.
 </p>
 My strategy to solve this challenge was:
 
-**Step 01. Data Description:**  Use descriptive statistics to have an initial comprehension of the data. Find inconsistencies like duplicates, missing values, incompatible data types, and strange values.
+**Step 01. Data Description:**  Utilize descriptive statistics to gain an initial understanding of the dataset. Find inconsistencies like duplicates, missing values, incompatible data types, and strange values.
 
-**Step 02. Data Filtering:** Remove instances that don't make sense for the project, and inconsistencies found in the previous step.
+**Step 02. Data Filtering:** Remove instances that don't make sense for the project and inconsistencies found in the previous step.
 
-**Step 03. Feature Engineering:** Create features from the purchase history of the customers to allow us to create a dataset of unique customers with their purchase metrics. 
+**Step 03. Feature Engineering:** Create features from the customers' purchase history to allow us to create a dataset of unique customers with their purchase metrics. 
 
-**Step 04. Exploratory Data Analysis:** Exploratory data analysis to find features that will help segment the customers. Also, verify if there are any absurd values in the data.
+**Step 04. Exploratory Data Analysis:** Exploratory data analysis to find features to help segment the customers. Also, verify if there are any absurd values in the data.
 
 **Step 05. Data Preparation:** Defining the encoding methods for categorical variables and scaling methods for numerical variables (use q-q plot and Kolmogorov-Smirnov test to help define which method to use).
 
 **Step 06. Feature Selection:** Select the features that make more sense for the business to segment its customers.
 
-**Step 07. Embedding Space Study:** Visualizing the data in a lower dimensional space using different dimensionality reduction techniques (PCA (Principal Component Analysis), TSNE (t-Dstributed Stochastic Neighbor), UMAP (Uniform Manifold Approximation and Projection), and a tree based embedding space + UMAP). This can help reveal patterns, clusters, and relationships that may be challenging to perceive in higher dimensions.
+**Step 07. Embedding Space Study:** Visualizing the data in a lower dimensional space using different dimensionality reduction techniques (PCA (Principal Component Analysis), TSNE (t-Dstributed Stochastic Neighbor), UMAP (Uniform Manifold Approximation and Projection), and a tree-based embedding space + UMAP). This can help reveal patterns, clusters, and relationships that may be challenging to perceive in higher dimensions.
 
 **Step 08. Hyperparameter Fine Tunning:** Find the number of clusters for three models (K-means, Gaussian Mixture, and Hierarchical Clustering) using the silhouette score as the evaluation metric.
 
-**Step 09. Machine Learning Modelling:** With the best reasonable number of clusters defined in the previous section, train the algorithm with the best performance to find the customers eligible for the Insiders program.
+**Step 09. Machine Learning Modelling:** With the best and most reasonable number of clusters defined in the previous section, train the algorithm with the best performance to find the customers eligible for the Insiders program.
 
 **Step 10. Exploratory Data Analysis:** Create a mind map of Hypotheses. Analyze the insider group and validate some hypotheses. And answer the business questions.
 
@@ -117,7 +117,7 @@ My strategy to solve this challenge was:
 
 <img src='reports/figures/revenue.png'>
 
-**True:** The insider group is reponsible for 53.20% of the revenue.
+**True:** The insider group is responsible for 53.20% of the revenue.
 </br><br/>
 
 **Hypothesis 03:** The insider group of customers has a purchase cancellation rate that is 5% lower than the overall cancellation rate.
@@ -129,18 +129,18 @@ My strategy to solve this challenge was:
 
 # 5. Machine Learning Model Applied
 
-In this project three models were tested with using four different spaces.
+In this project, three models were tested using four different spaces.
 
 Models:
 
     - K-Means;
     - Gaussian Mixture Model;
-    - Hierarchichal Clustering.
+    - Hierarchical Clustering.
 
 Spaces (Embeddings):
 
     - Feature Space;
-    - T - distributed stochastic neighboor embedding (T-SNE);
+    - T - distributed stochastic neighbor embedding (T-SNE);
     - Uniform Manifold Approximation and Projection for Dimension Reduction (UMAP);
     - Tree-based space + UMAP.
 
@@ -148,13 +148,13 @@ Spaces (Embeddings):
 
 The silhouette score was employed as the evaluation metric for assessing the performance of the models.
 
-This metric quantifies the degree of separation and distinctviness between clusters. Its values span from -1 to 1, indicating the extent to which clusters are well-separated and clearly distinguishable from one another.
+This metric quantifies the degree of separation and distinctiveness between clusters. Its values span from -1 to 1, indicating the extent to which clusters are well-separated and clearly distinguishable from one another.
 
-This metric measures the cohesion of the data points within clusters and the separation between different clusters. Its values ranges from -1 to 1. 
+This metric measures the cohesion of the data points within clusters and the separation between different clusters. Its values range from -1 to 1. 
 
 1 -> The clusters are compact and well-separated.
 
-0 -> The distance between clusters is not signifcant.
+0 -> The distance between clusters is not significant.
 
 1 -> Clusters are being assigned in the wrong way.
 </br><br/>
@@ -220,7 +220,7 @@ For the final model, the k-means algorithm was used in combination with the tree
 
 4. What is the share of the revenue that comes from the Insider group?
 
-    The insider group is reponsible for 53.20% of the revenue.
+    The insider group is responsible for 53.20% of the revenue.
 
 5. What are the requirements for a customer to be eligible for the Insider group?
 
@@ -228,14 +228,14 @@ For the final model, the k-means algorithm was used in combination with the tree
 
 6. What guarantees that the Insider program is better than the rest of the database?
 
-    The metrics of the insider group is better than the other groups.
+    The metrics of the insider group are better than other groups's metrics.
 
 7. What can the marketing team do to augment the revenue?
 
-    1. Offer a direct line to the best customers, improving the communication (anouncing products/services and promoting sales).
-    2. Drop off unprofitable customers (customers who only buy the discounted line and avoid premium range).
+    1. Offer a direct line to the best customers, improving communication (announcing products/services and promoting sales).
+    2. Drop off unprofitable customers (customers who only buy the discounted line and avoid the premium range).
     3. Personalized offers for each group.
-    4. Optimize marketing channels, identify the most effective marketing channels for each group.
+    4. Optimize marketing channels and identify the most effective marketing channels for each group.
 <p></p>
 
 # 8. Model Deployment
@@ -258,17 +258,17 @@ For the final model, the k-means algorithm was used in combination with the tree
 
 # 9. Conclusions
 
-In this project, we have successfully developed a machine learning model aimed at identifying customer clusters.The objective this model is to assist the company define which customers should be eligible for their forthcoming loyalty program.
+In this project, we have successfully developed a machine-learning model to identify customer clusters. The objective of this model is to assist the company define which customers should be eligible for their forthcoming loyalty program.
 
 <p></p>
 
 # 10. Lessons Learned
 
-Clustering is a quite difficult task, and since there is no right/wrong answer it is to evaluate the performance of the algorithms.
+Clustering is a difficult task, and since there is no right or wrong answer it is to evaluate the performance of the algorithms.
 
-In this project I learned about metrics to evaluate a clustering model.
+In this project, I've learned about metrics to evaluate a clustering model.
 
-In a clustering problem, we are interested in finding features that help us segregate our data. So that are a few statistics that we should focus on when analysing the features of the data, like:
+In a clustering problem, we are interested in finding features that help us segregate our data. So that are a few statistics that we should focus on when analyzing the features of the data, like:
 
     - Range (difference between maximum and minimum value).
     - Interquartile Range (IQR).
@@ -283,11 +283,11 @@ Comunidade DS
 
 Introduction to Machine Learning with Python
 
-Hands on Machine Learning with Scikit Learn Keras and TensorFlow 
+Hands-on Machine Learning with Scikit Learn Keras and TensorFlow 
 
 https://distill.pub/2016/misread-tsne/
 
 
 ## Author
 
-#### This project was made by Breno Teixeira Chaves.
+#### This project was developed by Breno Teixeira Chaves.
