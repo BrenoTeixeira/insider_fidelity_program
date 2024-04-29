@@ -204,7 +204,7 @@ For the final model, the k-means algorithm was used in combination with the tree
 
     <img src='reports/figures/insider_customers.png'>
 
-    Full List: [List of Customers]('reports/table.md')
+    Full List: [List of Customers](reports/table.md)
 <p></p>
 
 2. How many customers will be in the group?
