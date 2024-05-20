@@ -39,7 +39,7 @@ In over a year of operation, the marketing team realized that some customers in 
 
 However, the marketing team doesn't have advanced data analysis knowledge to define the eligible customers for the program. So they reached out to the data team for assistance. 
 
-The data team task is to use advanced data mining techniques to identify and select the customers eligible for the Insiders program.
+The data team's task is to use advanced data mining techniques to identify and select the customers eligible for the Insiders program.
 
 ## 1.1 Solution
 
@@ -59,13 +59,13 @@ The final product will be a report with answers to the following business questi
 
 |Attribute|Description
 ----------|-----------
-InvoiceNo| Invoice number. Nominal. A 6-digit integral number uniquely assigned to each transaction. If this code starts with the letter 'c', it indicates a cancellation.
-StockCode| Product (item) code. Nominal. A 5-digit integral number uniquely assigned to each distinct product.
+InvoiceNo| Invoice number. Nominal. A 6-digit integer number uniquely assigned to each transaction. If this code starts with the letter 'c', it indicates a cancellation.
+StockCode| Product (item) code. Nominal. A 5-digit integer number uniquely assigned to each distinct product.
 Description| Product (item) name. Nominal.
 Quantity| The quantities of each product (item) per transaction. Numeric.
-InvoiceDate| Invoice Date and time. Numeric. The day and time when each transaction was generated.
+InvoiceDate| Invoice Date and time. The day and time when each transaction was generated.
 UnitPrice| Unit price. Numeric, Product price per unit in sterling.
-CustomerID| Customer number. Nominal. A 5-digit integral number uniquely assigned to each customer.
+CustomerID| Customer number. Nominal. A 5-digit integer number uniquely assigned to each customer.
 Country| Country name. Nominal. The name of the country where each customer resides.
 
 Instances with negative quantity and price values that are not canceled purchases won't be considered for the project.
@@ -99,7 +99,7 @@ My strategy to solve this challenge was:
 
 **Step 09. Machine Learning Modelling:** With the best and most reasonable number of clusters defined in the previous section, train the algorithm with the best performance to find the customers eligible for the Insiders program.
 
-**Step 10. Exploratory Data Analysis:** Create a mind map of Hypotheses. Analyze the insider group and validate some hypotheses. And answer the business questions.
+**Step 10. Exploratory Data Analysis:** Create a mind map of Hypotheses. Analyze the insider group, validate some hypotheses, and answer the business questions.
 
 **Step 11. Deploy Model to Production:** Deploy the model to production using the AWS service.
 </br><br/>
@@ -139,10 +139,10 @@ Models:
 
 Spaces (Embeddings):
 
-    - Feature Space;
-    - T - distributed stochastic neighbor embedding (T-SNE);
-    - Uniform Manifold Approximation and Projection for Dimension Reduction (UMAP);
-    - Tree-based space + UMAP.
+- Feature Space;
+- T - distributed stochastic neighbor embedding (T-SNE);
+- Uniform Manifold Approximation and Projection for Dimension Reduction (UMAP);
+- Tree-based space + UMAP.
 
 ## 5.1 Evaluation Metrics
 
@@ -156,7 +156,7 @@ This metric measures the cohesion of the data points within clusters and the sep
 
 0 -> The distance between clusters is not significant.
 
-1 -> Clusters are being assigned in the wrong way.
+-1 -> Clusters are being assigned in the wrong way.
 </br><br/>
 
 ## 5.2 Defining the number of clusters and the Embedding space.
@@ -181,7 +181,7 @@ In this section, for each model, four plots were generated, each representing a 
 
 # 6. Machine Learning Model
 
-For the final model, the k-means algorithm was used in combination with the tree-based embedding and UMAP space. I opted for 10 clusters in order to capture meaningful customer segments and avoid an excessive number of groups that would be challenging to manage effectively.
+For the final model, the k-means algorithm was used in combination with the tree-based embedding and UMAP space. The number of clusters was 10 to capture meaningful customer segments and avoid an excessive number of groups that would be challenging to manage effectively.
 </br><br/>
 
 ## 6.1 Silhouette analysis plot - Final Model (K-means)
@@ -232,10 +232,10 @@ For the final model, the k-means algorithm was used in combination with the tree
 
 7. What can the marketing team do to augment the revenue?
 
-    1. Offer a direct line to the best customers, improving communication (announcing products/services and promoting sales).
-    2. Drop off unprofitable customers (customers who only buy the discounted line and avoid the premium range).
-    3. Personalized offers for each group.
-    4. Optimize marketing channels and identify the most effective marketing channels for each group.
+1. Offer a direct line to the best customers, improving communication (announcing products/services and promoting sales).
+2. Drop off unprofitable customers (customers who only buy the discounted line and avoid the premium range).
+3. Personalized offers for each group.
+4. Optimize marketing channels and identify the most effective marketing channels for each group.
 <p></p>
 
 # 8. Model Deployment
