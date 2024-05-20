@@ -68,7 +68,7 @@ Country|	Nome do país. Nominal. O nome do país onde cada cliente reside.
 
 Instâncias com valores negativos de quantidade e preço que não são compras canceladas não serão consideradas para o projeto.
 
-Instâncias com um código de estoque com letras são muito provavelmente transações de não clientes.
+Instâncias com um código de estoque com letras provavelmente não são transações de clientes.
 </br><br/>
 
 # 3. Estratégia da Solução
@@ -167,12 +167,12 @@ Nesta seção, para cada modelo, foram gerados quatro gráficos, cada um represe
 <img src="reports/figures/kmeans.png">
 </br><br/>
 
-### 5.2.2 Modelo de Mistura Gaussiana
+### 5.2.2 Gaussian-Mixture
 
 <img src="reports/figures/gaussian_mm.png">
 </br><br/>
 
-### 5.2.3 Agrupamento Hierárquico
+### 5.2.3 Hierarchical Clustering
 
 <img src="reports/figures/hierarchical.png">
 </br><br/>
@@ -186,12 +186,11 @@ Para o modelo final, o algoritmo k-means foi usado em combinação com o tree-ba
 <img src="reports/figures/silhouette_analysis.png">
 </br><br/>
 
-## 6.2 Clusters no Espaço de Árvore e UMAP
+## 6.2 Clusters no  tree-based embedding e UMAP
 <img src="reports/figures/embedding_tree_space_clusters.png">
 </br><br/>
 
 # 7. Relatório de Negócios
-
 
 <img src='reports/figures/report_insider.png'>
 <p></p>
@@ -251,18 +250,17 @@ As métricas do grupo de insiders são melhores do que as métricas de outros gr
 
 # 9. Conclusões
 
-Neste projeto, desenvolvemos com sucesso um modelo de aprendizado de máquina para identificar clusters de clientes. O objetivo deste modelo é ajudar a empresa a definir quais clientes devem ser elegíveis para seu próximo programa de fidelidade.
+Neste projeto, um modelo de aprendizado de máquina foi desenvolvido com sucesso  para identificar clusters de clientes. O objetivo deste modelo é ajudar a empresa a definir quais clientes são elegíveis para seu próximo programa de fidelidade.
 
 <p></p>
 
 # 10. Lições Aprendidas
 
-O agrupamento é uma tarefa difícil e, como não há uma resposta certa ou errada, é importante avaliar o desempenho dos algoritmos.
+O agrupamento é uma tarefa difícil e, como não há uma resposta certa ou errada, é difívil avaliar o desempenho dos algoritmos.
 
-Neste projeto, aprendi sobre métricas para avaliar um modelo de agrupamento.
+Aprendi sobre métricas para avaliar um modelo de agrupamento.
 
 Em um problema de agrupamento, estamos interessados em encontrar características que nos ajudem a segregar nossos dados. Portanto, existem algumas estatísticas nas quais devemos nos concentrar ao analisar as características dos dados, como:
-
 
 - Amplitude (diferença entre o valor máximo e mínimo).
 - Amplitude Interquartil (IQR).
