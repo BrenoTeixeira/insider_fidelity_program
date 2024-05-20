@@ -1,6 +1,6 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](README.en.md)
 
-# Agrupamento de Insiders
+# Agrupamento Clientes (Insiders)
 
 <img src='images/readme/cover.jpg'>
 
