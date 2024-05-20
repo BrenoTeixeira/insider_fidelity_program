@@ -196,7 +196,6 @@ For the final model, the k-means algorithm was used in combination with the tree
 
 # 7. Business Report
 
-
 <img src='reports/figures/report_insider.png'>
 <p></p>
 
@@ -260,15 +259,15 @@ For the final model, the k-means algorithm was used in combination with the tree
 
 # 9. Conclusions
 
-In this project, we have successfully developed a machine-learning model to identify customer clusters. The objective of this model is to assist the company define which customers should be eligible for their forthcoming loyalty program.
+In this project, a machine-learning model was successfully developed to identify customer clusters. The objective of this model is to assist the company define which customers should be eligible for their forthcoming loyalty program.
 
 <p></p>
 
 # 10. Lessons Learned
 
-Clustering is a difficult task, and since there is no right or wrong answer it is to evaluate the performance of the algorithms.
+Clustering is a difficult task, and since there is no right or wrong answer it is hard to evaluate the performance of the algorithms.
 
-In this project, I've learned about metrics to evaluate a clustering model.
+I've learned about metrics to evaluate a clustering model.
 
 In a clustering problem, we are interested in finding features that help us segregate our data. So that are a few statistics that we should focus on when analyzing the features of the data, like:
 
