@@ -1,3 +1,5 @@
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/BrenoTeixeira/insider_fidelity_program/tree/main)
+
 # Insiders Clustering
 
 
